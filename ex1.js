@@ -15,6 +15,22 @@
  */
 
 class Pokemon {
+
+    constructor(id, name, type, maxlife, powerat,powerdef){
+
+        this.id=id
+        this.name = name
+        this.type = type
+        this.maxlife=maxlife
+        this.powerat = powerat
+        this.powerdef=powerdef
+     
+
+    }
+
+    
+
+
 }
 
 // TEST----

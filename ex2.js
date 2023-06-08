@@ -23,11 +23,35 @@ class Pokemon {
         this.ataque = ataque
         this.defensa = defensa
     }
+    atacar(pokemon){
+console.log(this.nombre + " Ataca a " + pokemon.nombre)
+
+
+const powerAtack = Math.floor(Math.random() * this.ataque)
+console.log("Bulbasaur ataca con " + powerAtack + " puntos de daño")
+
+const powerDefense = Math.floor(Math.random() * this.defensa)
+console.log("Squirtle se defiende con " + powerDefense + " puntos de defensa")
+
+let AsestarGolpe = powerAtack > powerDefense ? "Bulbasaur ha acertado el ataque" :"Bulbasaur ha fallado el ataque"
+   
+console.log(AsestarGolpe)
+
+let VidaSquirtle = pokemon.vida - (powerAtack-powerDefense)
+
+console.log( "la salud de Squirtle es ahora de " + VidaSquirtle + " puntos de vida ")
 }
+    
+    
+}
+
+
+
 
 let bulbasaur = new Pokemon(1, "Bulbasaur", ['Grass', 'Poison'], 45, 49, 49)
 let squirtle = new Pokemon(1, "Squirtle", ['Water'], 44, 48, 65)
 
-// bulbasaur.atacar(squirtle)
+ bulbasaur.atacar(squirtle)
+
 
 
